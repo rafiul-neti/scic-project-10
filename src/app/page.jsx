@@ -1,4 +1,5 @@
 import About from "@/Components/Home/About/About";
+import PricePlan from "@/Components/Home/PricePlan/PricePlan";
 import Services from "@/Components/Home/Services/Services";
 import Slider from "@/Components/Home/Slider/Slider";
 import Navbar from "@/Components/Navbar";
@@ -13,6 +14,7 @@ export default function Home() {
         <div className="lg:w-11/12 lg:mx-auto p-7 sm:p-3 lg:p-0">
           <About />
           <Services />
+          <PricePlan />
         </div>
       </main>
     </div>

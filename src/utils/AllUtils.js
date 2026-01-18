@@ -56,3 +56,30 @@ export const services = [
     image: Stacking,
   },
 ];
+
+export const prices = [
+  {
+    title: "Haircut",
+    price: "$39.00",
+  },
+  {
+    title: "Beard Trim",
+    price: "$15.00",
+  },
+  {
+    title: "Mans Shave",
+    price: "$19.00",
+  },
+  {
+    title: "Hair Dyeing",
+    price: "$23.00",
+  },
+  {
+    title: "Mustache",
+    price: "$35.00",
+  },
+  {
+    title: "Stacking",
+    price: "$29.00",
+  },
+];
