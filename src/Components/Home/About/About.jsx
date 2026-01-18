@@ -2,20 +2,9 @@ import SectionTitle from "@/Components/Shared/SectionTitle";
 import React from "react";
 import aboutImg from "../../../../public/images/about.jpg";
 import Image from "next/image";
+import { subSections } from "@/utils/AllUtils";
 
 const About = () => {
-  const subSections = [
-    {
-      title: "Since 1990",
-      subTitle:
-        "Bringing style and confidence for over 30 years. Every cut crafted with care and passion.",
-    },
-    {
-      title: "1000+ clients",
-      subTitle:
-        "Trusted by thousands of happy clients. We create looks that make everyone feel amazing.",
-    },
-  ];
   return (
     <section className="my-20 w-11/12 mx-auto flex flex-col lg:flex-row gap-36 lg:gap-10">
       <div className="relative flex-1 flex justify-end items-start">

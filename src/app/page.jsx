@@ -1,4 +1,5 @@
 import About from "@/Components/Home/About/About";
+import Services from "@/Components/Home/Services/Services";
 import Slider from "@/Components/Home/Slider/Slider";
 import Navbar from "@/Components/Navbar";
 
@@ -9,8 +10,9 @@ export default function Home() {
       <main className="pt-16 lg:pt-24">
         <Slider />
 
-        <div className="w-11/12 mx-auto p-2 lg:p-0">
+        <div className="lg:w-11/12 lg:mx-auto p-7 sm:p-3 lg:p-0">
           <About />
+          <Services />
         </div>
       </main>
     </div>
