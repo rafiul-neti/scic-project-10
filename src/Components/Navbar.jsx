@@ -3,7 +3,9 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import avatarImg from "../../public/images/placeholder.jpg";
+import navlogo from "../../public/images/logo.webp";
 import NavLink from "./NavLink";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,13 +16,19 @@ const Navbar = () => {
         <NavLink href={"/"}>Home</NavLink>
       </li>
       <li>
-        <NavLink href={"/"}>All Products</NavLink>
+        <NavLink href={"/"}>About</NavLink>
+      </li>
+      <li>
+        <NavLink href={"/"}>Service</NavLink>
+      </li>
+      <li>
+        <NavLink href={"/"}>Contact</NavLink>
       </li>
     </>
   );
 
   return (
-    <div className="fixed navbar z-50 shadow-sm">
+    <div className="fixed navbar z-50 dark:bg-[#191C24] shadow-sm py-0 md:py-2 lg:py-5">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,7 +56,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link href={`/`} className="flex items-center">
-          <h2 className="text-4xl font-black transition-all duration-300 hover:tracking-wide"></h2>
+          <Image src={navlogo} alt="logo" width={120} height="auto" />
         </Link>
       </div>
 
@@ -67,7 +75,7 @@ const Navbar = () => {
               <AiOutlineMenu />
               <div className="hidden md:block aspect-square">
                 {/* Avatar */}
-                <img
+                <Image
                   className="object-center rounded-full"
                   referrerPolicy="no-referrer"
                   src={avatarImg}
@@ -79,17 +87,17 @@ const Navbar = () => {
             </div>
           </div>
           {isOpen && (
-            <div className="absolute rounded-xl shadow-md w-[40vw] md:w-[10vw]  overflow-hidden right-0 top-12 text-sm">
+            <div className="absolute rounded-xl shadow-md bg-base-100 w-[40vw] md:w-[10vw] overflow-hidden right-0 top-12 text-sm border border-base-300">
               <div className="flex flex-col cursor-pointer">
                 {isLoggedIn ? (
                   <>
                     <Link
                       href="/dashboard"
-                      className="px-4 py-3 hover:bg-neutral-100 transition font-semibold"
+                      className="px-4 py-3 hover:bg-base-200 transition font-semibold"
                     >
                       Dashboard
                     </Link>
-                    <div className="px-4 py-3 hover:bg-neutral-100 transition font-semibold cursor-pointer">
+                    <div className="px-4 py-3 hover:bg-base-200 transition font-semibold cursor-pointer">
                       Logout
                     </div>
                   </>
@@ -97,13 +105,13 @@ const Navbar = () => {
                   <>
                     <Link
                       href="/login"
-                      className="px-4 py-3 hover:bg-neutral-100 transition font-semibold"
+                      className="px-4 py-3 hover:bg-base-200 transition font-semibold"
                     >
                       Login
                     </Link>
                     <Link
                       href="/signup"
-                      className="px-4 py-3 hover:bg-neutral-100 transition font-semibold"
+                      className="px-4 py-3 hover:bg-base-200 transition font-semibold"
                     >
                       Sign Up
                     </Link>

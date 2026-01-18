@@ -1,11 +1,13 @@
+import Slider from "@/Components/Home/Slider/Slider";
 import Navbar from "@/Components/Navbar";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-50 font-sans dark:bg-black">
       <Navbar />
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16  dark:bg-black sm:items-start"></main>
+      <main className="pt-16 lg:pt-24">
+        <Slider />
+      </main>
     </div>
   );
 }
