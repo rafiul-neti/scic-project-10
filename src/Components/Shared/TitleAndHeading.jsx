@@ -14,7 +14,7 @@ const TitleAndHeading = ({
         {title}
       </SectionTitle>
       <h1
-        className={`uppercase text-center mt-5 mb-12 text-[40px] font-bold ${headingClass}`}
+        className={`uppercase text-center mt-5 mb-12 text-3xl lg:text-[40px] font-bold ${headingClass}`}
       >
         {heading}
       </h1>

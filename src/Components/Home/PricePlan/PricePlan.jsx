@@ -3,6 +3,7 @@ import { prices } from "@/utils/AllUtils";
 import Image from "next/image";
 import React from "react";
 import PriceImage from "../../../../public/images/price.jpg";
+import PriceTime from "@/Components/Shared/PriceTime";
 
 const PricePlan = () => {
   return (
@@ -16,19 +17,11 @@ const PricePlan = () => {
         />
 
         <div className="">
-          {prices.map((price, i) => (
-            <div key={i}>
-              <div className="flex items-center justify-between py-2 text-lg">
-                <h1 className="uppercase font-bold">{price.title}</h1>
-                <p className="text-red-600">{price.price}</p>
-              </div>
-              <hr />
-            </div>
-          ))}
+          <PriceTime items={prices} />
         </div>
       </div>
       <div className="flex-1">
-        <Image src={PriceImage} alt="" />
+        <Image src={PriceImage} alt="price_image" />
       </div>
     </section>
   );

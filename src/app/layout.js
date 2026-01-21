@@ -14,11 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${oswald.className} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${oswald.className} antialiased`}>{children}</body>
     </html>
   );
 }
